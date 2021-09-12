@@ -47,9 +47,25 @@ function isFull() {
 console.log(`Basekt is ${basket}`);
 console.log('Adding grapes (expect true)', addItem('grapes'));
 console.log('Checking basket, (expect false)', isFull());
-console.log('Adding bread (expect true)', addItem('bread'));
-console.log('Adding butter (expect true)', addItem('butter'));
-console.log('Adding milk and eggs (expect true)', addItem('milk'), addItem('eggs'));
+console.log('Adding bread and butter (expect true x2)', addItem('bread'), addItem('butter'));
+console.log('Adding milk and eggs (expect true x2)', addItem('milk'), addItem('eggs'));
 console.log(`Basket is ${basket}`);
 console.log('Checking basket, (expect true)', isFull());
-console.log('Trying to add cereal (ezxpect false)', addItem('cereal'));
+console.log('Trying to add cereal (expect false)', addItem('cereal'));
+console.log(`Basket is ${basket}`);
+
+function removeItem(item) {
+  let indexToRemove = basket.indexOf(item);
+  if(indexToRemove > -1) {
+    basket.splice(indexToRemove, 1);
+    return item;
+    }//end if
+      else{
+      return null;
+    }//end else
+}//end removeItem
+
+console.log('Removing butter (expect butter)', removeItem('butter'));
+console.log(`Basket is ${basket}`);
+console.log('Try to remove chocolate (expect null)', removeItem('chocolate'));
+console.log(`Basket is ${basket}`);
