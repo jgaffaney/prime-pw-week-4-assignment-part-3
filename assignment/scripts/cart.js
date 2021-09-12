@@ -33,7 +33,7 @@ function empty() {
   basket = [];
 }
 //empty()//for testing only
-console.log('TEST - shoud show an empty array and return undefined', empty(), basket);
+console.log('TEST - shoud empty the basket and return undefined', empty(), basket);
 
 function isFull() {
   if(maxItems > basket.length) {
@@ -46,11 +46,11 @@ function isFull() {
 
 console.log(`Basekt is ${basket}`);
 console.log('Adding grapes (expect true)', addItem('grapes'));
-console.log('Checking basket, (expect false)', isFull());
+console.log('Checking basket to see if it is full, (expect false)', isFull());
 console.log('Adding bread and butter (expect true x2)', addItem('bread'), addItem('butter'));
 console.log('Adding milk and eggs (expect true x2)', addItem('milk'), addItem('eggs'));
 console.log(`Basket is ${basket}`);
-console.log('Checking basket, (expect true)', isFull());
+console.log('Checking basket to see if it is full, (expect true)', isFull());
 console.log('Trying to add cereal (expect false)', addItem('cereal'));
 console.log(`Basket is ${basket}`);
 
